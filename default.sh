@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get update && apt-get install -y build-essential && pip install git+https://github.com/PygmalionAI/aphrodite-engine@dev
+apt-get update && apt-get install -y build-essential && pip install git+https://github.com/PygmalionAI/aphrodite-engine
 
 echo 'Build Done. Starting server...'
 
