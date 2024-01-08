@@ -1,9 +1,5 @@
 #!/bin/bash
 
-apt update
-apt install -y screen vim git-lfs git wget bzip2 tar build-essential
+apt-get update && apt-get install -y build-essential && pip install git+https://github.com/PygmalionAI/aphrodite-engine@dev
 
-git clone https://github.com/PygmalionAI/aphrodite-engine
-cd aphrodite-engine
-
-./runtime.sh python -m aphrodite.endpoints.openai.api_server --model $MODEL --quantization $QUANTIZATION --chat-template ../DeploIt/chat_template/$CHAT_TEMPLATE.jinja
+python -m aphrodite.endpoints.openai.api_server --model $MODEL --quantization $QUANTIZATION --chat-template ../DeploIt/chat_template/$CHAT_TEMPLATE.jinja
