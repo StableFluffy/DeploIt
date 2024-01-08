@@ -2,7 +2,6 @@
 
 apt update
 apt install -y screen vim git-lfs git wget bzip2 tar
-screen
 
 git clone https://github.com/PygmalionAI/aphrodite-engine
 cd aphrodite-engine
