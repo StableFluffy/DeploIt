@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt update
-apt install -y screen vim git-lfs git wget bzip2 tar
+apt install -y screen vim git-lfs git wget bzip2 tar build-essential
 
 git clone https://github.com/PygmalionAI/aphrodite-engine
 cd aphrodite-engine
