@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', path='/main.css') }}" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white">
+    <div class="absolute left-6 top-4 font-extrabold text-3xl">DeploIt</div>
+    <div class="h-screen flex items-center justify-center font-bold">
+        <div>
+            <div class="text-gray-300 text-base font-light">
+                MODEL
+            </div>
+            <div class="text-3xl hover:bg-neutral-900 duration-300 hover:cursor-pointer">
+                <a href="https://huggingface.co/{{ model_id }}">{{ model_id }}</a>
+            </div>
+            <hr class="border-gray-600 my-4">
+            <div class="justify-between flex">
+                <div class="text-gray-300 text-base font-light">
+                    TOTAL INPUT
+                </div>
+                <div class="text-gray-300 text-base font-light">
+                    TOTAL GENERATED
+                </div>
+            </div>
+            <div class="justify-between gap-8 flex text-2xl">
+                <div class="flex">
+                    <div>
+                        {{ token_data["prompt_tokens"] }}
+                    </div>
+                    <div class="text-gray-300 font-light ml-1">tok</div>
+                </div>
+                <div class="flex">
+                    <div>
+                        {{ token_data["completion_tokens"] }}
+                    </div>
+                    <div class="text-gray-300 font-light ml-1">tok</div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
