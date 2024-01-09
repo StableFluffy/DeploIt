@@ -13,6 +13,6 @@ if [ -n "$QUANTIZATION" ]; then
 fi
 
 bash -c "$CMD" &
-bash -c "python DeploIt/index.py" &
+bash -c "cd DeploIt && python index.py" &
 
 wait
